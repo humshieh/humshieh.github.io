@@ -15,7 +15,7 @@
 
 
 <html class="theme-next gemini use-motion" lang="zh-CN">
-<head><meta name="generator" content="Hexo 3.8.0">
+<head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
@@ -124,20 +124,20 @@
 
 
 
-  <meta name="description" content="Java8内存模型     控制参数 使用说明     -Xms 设置堆的最小空间大小   -Xmx 设置堆的最大空间大小   -XX:NewSize 设置新生代最小空间大小   -XX:MaxNewSize 设置新生代最大空间大小   -XX:PermSize 设置永久代最小空间大小   -XX:MaxPermSize 设置永久代最大空间大小   -Xss 设置每个线程的堆栈大小     HEA">
+  <meta name="description" content="Java8内存模型">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java8内存模型">
-<meta property="og:url" content="https://humshieh.github.io/2018/10/25/Java8内存模型/index.html">
+<meta property="og:url" content="https://shepherd-xie.github.io/2018/10/25/Java8内存模型/index.html">
 <meta property="og:site_name" content="Shepherd&#39;s Blog">
-<meta property="og:description" content="Java8内存模型     控制参数 使用说明     -Xms 设置堆的最小空间大小   -Xmx 设置堆的最大空间大小   -XX:NewSize 设置新生代最小空间大小   -XX:MaxNewSize 设置新生代最大空间大小   -XX:PermSize 设置永久代最小空间大小   -XX:MaxPermSize 设置永久代最大空间大小   -Xss 设置每个线程的堆栈大小     HEA">
+<meta property="og:description" content="Java8内存模型">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://humshieh.github.io/2018/10/25/Java8内存模型/assets/java_runtime_data_areas.jpg">
-<meta property="og:image" content="https://humshieh.github.io/2018/10/25/Java8内存模型/assets/Cookbook_JVMArguments_2_MemoryModel.png">
-<meta property="og:updated_time" content="2019-09-02T10:40:40.806Z">
+<meta property="og:image" content="https://shepherd-xie.github.io/2018/10/25/Java8内存模型/assets/java_runtime_data_areas.jpg">
+<meta property="og:image" content="https://shepherd-xie.github.io/2018/10/25/Java8内存模型/assets/Cookbook_JVMArguments_2_MemoryModel.png">
+<meta property="og:updated_time" content="2020-02-25T09:11:37.010Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java8内存模型">
-<meta name="twitter:description" content="Java8内存模型     控制参数 使用说明     -Xms 设置堆的最小空间大小   -Xmx 设置堆的最大空间大小   -XX:NewSize 设置新生代最小空间大小   -XX:MaxNewSize 设置新生代最大空间大小   -XX:PermSize 设置永久代最小空间大小   -XX:MaxPermSize 设置永久代最大空间大小   -Xss 设置每个线程的堆栈大小     HEA">
-<meta name="twitter:image" content="https://humshieh.github.io/2018/10/25/Java8内存模型/assets/java_runtime_data_areas.jpg">
+<meta name="twitter:description" content="Java8内存模型">
+<meta name="twitter:image" content="https://shepherd-xie.github.io/2018/10/25/Java8内存模型/assets/java_runtime_data_areas.jpg">
 
 
 
@@ -146,7 +146,7 @@
 
 
 
-  <link rel="canonical" href="https://humshieh.github.io/2018/10/25/Java8内存模型/">
+  <link rel="canonical" href="https://shepherd-xie.github.io/2018/10/25/Java8内存模型/">
 
 
 
@@ -197,7 +197,7 @@
 
 </head>
 
-<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-CN">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
 
   
   
@@ -207,7 +207,7 @@
   <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
-    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
   <div class="site-meta">
     
@@ -396,20 +396,20 @@
 
   
 
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://humshieh.github.io/2018/10/25/Java8内存模型/">
+    <link itemprop="mainEntityOfPage" href="https://shepherd-xie.github.io/2018/10/25/Java8内存模型/">
 
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Shepherd Xie">
       <meta itemprop="description" content="苦逼程序员的无聊日常">
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="Shepherd's Blog">
     </span>
 
@@ -462,7 +462,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/JVM/" itemprop="url" rel="index"><span itemprop="name">JVM</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/JVM/" itemprop="url" rel="index"><span itemprop="name">JVM</span></a></span>
 
                 
                 
@@ -497,7 +497,8 @@
       
 
       
-        <h2 id="Java8内存模型"><a href="#Java8内存模型" class="headerlink" title="Java8内存模型"></a>Java8内存模型</h2><p><img src="assets/java_runtime_data_areas.jpg" alt="Java8内存模型"></p>
+        <h2 id="Java8内存模型"><a href="#Java8内存模型" class="headerlink" title="Java8内存模型"></a>Java8内存模型</h2><a id="more"></a>
+<p><img src="assets/java_runtime_data_areas.jpg" alt="Java8内存模型"></p>
 <p><img src="assets/Cookbook_JVMArguments_2_MemoryModel.png" alt="区域的内存大小"></p>
 <table>
 <thead>
@@ -643,7 +644,7 @@
 
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
-          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
               <p class="site-author-name" itemprop="name">Shepherd Xie</p>
               <p class="site-description motion-element" itemprop="description">苦逼程序员的无聊日常</p>
@@ -656,7 +657,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">31</span>
+                    <span class="site-state-item-count">21</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -679,9 +680,7 @@
                     
                       
                     
-                      
-                    
-                    <span class="site-state-item-count">6</span>
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -726,7 +725,18 @@
                   
                     
                   
-                  <a href="https://github.com/humshieh" title="GitHub &rarr; https://github.com/humshieh" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                  <a href="https://github.com/shepherd-xie" title="GitHub &rarr; https://github.com/shepherd-xie" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://blog.orkva.com/blog-book" title="GitBook &rarr; https://blog.orkva.com/blog-book" rel="noopener" target="_blank"><i class="fa fa-fw fa-book"></i>GitBook</a>
                 </span>
               
             </div>
@@ -776,7 +786,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; 2018 – <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">&copy; 2018 – <span itemprop="copyrightYear">2020</span>
   <span class="with-love" id="animate">
     <i class="fa fa-heart"></i>
   </span>

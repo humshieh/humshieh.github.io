@@ -15,7 +15,7 @@
 
 
 <html class="theme-next gemini use-motion" lang="zh-CN">
-<head><meta name="generator" content="Hexo 3.8.0">
+<head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
@@ -124,17 +124,17 @@
 
 
 
-  <meta name="description" content="单例设计模式优化  使用同步保证线程安全synchronized 使用volatile关键字 volatile提醒编译器它后面所定义的变量随时都有可能改变，因此编译后的程序每次需要存储或读取这个变量的时候，都会直接从变量地址中读取数据。如果没有volition关键字，则编译器可能优化读取和存储，可能暂时使用寄存器中的值，如果这个变量由别的程序更新了的话，将出现不一致的现象。   防止反射调用私有构">
+  <meta name="description" content="单例设计模式优化">
 <meta property="og:type" content="article">
 <meta property="og:title" content="单例设计模式优化">
-<meta property="og:url" content="https://humshieh.github.io/2018/07/10/单例设计模式优化/index.html">
+<meta property="og:url" content="https://shepherd-xie.github.io/2018/07/10/单例设计模式优化/index.html">
 <meta property="og:site_name" content="Shepherd&#39;s Blog">
-<meta property="og:description" content="单例设计模式优化  使用同步保证线程安全synchronized 使用volatile关键字 volatile提醒编译器它后面所定义的变量随时都有可能改变，因此编译后的程序每次需要存储或读取这个变量的时候，都会直接从变量地址中读取数据。如果没有volition关键字，则编译器可能优化读取和存储，可能暂时使用寄存器中的值，如果这个变量由别的程序更新了的话，将出现不一致的现象。   防止反射调用私有构">
+<meta property="og:description" content="单例设计模式优化">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-09-02T10:40:40.806Z">
+<meta property="og:updated_time" content="2020-02-25T09:13:06.891Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="单例设计模式优化">
-<meta name="twitter:description" content="单例设计模式优化  使用同步保证线程安全synchronized 使用volatile关键字 volatile提醒编译器它后面所定义的变量随时都有可能改变，因此编译后的程序每次需要存储或读取这个变量的时候，都会直接从变量地址中读取数据。如果没有volition关键字，则编译器可能优化读取和存储，可能暂时使用寄存器中的值，如果这个变量由别的程序更新了的话，将出现不一致的现象。   防止反射调用私有构">
+<meta name="twitter:description" content="单例设计模式优化">
 
 
 
@@ -143,7 +143,7 @@
 
 
 
-  <link rel="canonical" href="https://humshieh.github.io/2018/07/10/单例设计模式优化/">
+  <link rel="canonical" href="https://shepherd-xie.github.io/2018/07/10/单例设计模式优化/">
 
 
 
@@ -194,7 +194,7 @@
 
 </head>
 
-<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-CN">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
 
   
   
@@ -204,7 +204,7 @@
   <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
-    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
   <div class="site-meta">
     
@@ -393,20 +393,20 @@
 
   
 
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://humshieh.github.io/2018/07/10/单例设计模式优化/">
+    <link itemprop="mainEntityOfPage" href="https://shepherd-xie.github.io/2018/07/10/单例设计模式优化/">
 
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Shepherd Xie">
       <meta itemprop="description" content="苦逼程序员的无聊日常">
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="Shepherd's Blog">
     </span>
 
@@ -476,7 +476,8 @@
       
 
       
-        <h2 id="单例设计模式优化"><a href="#单例设计模式优化" class="headerlink" title="单例设计模式优化"></a>单例设计模式优化</h2><hr>
+        <h2 id="单例设计模式优化"><a href="#单例设计模式优化" class="headerlink" title="单例设计模式优化"></a>单例设计模式优化</h2><a id="more"></a>
+<hr>
 <ul>
 <li>使用同步保证线程安全synchronized</li>
 <li>使用volatile关键字<ul>
@@ -486,7 +487,7 @@
 <li>防止反射调用私有构造方法</li>
 <li>让单例类序列化安全</li>
 </ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 单例模式</span></span><br><span class="line"><span class="comment"> * 1. 多线程访问的安全问题</span></span><br><span class="line"><span class="comment"> * 2. 加上volatile关键字保证变量的一致性</span></span><br><span class="line"><span class="comment"> * 3. 防止反射调用私有构造方法</span></span><br><span class="line"><span class="comment"> * 4. 让单例类可以被序列化</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Singleton</span> <span class="keyword">implements</span> <span class="title">Serializable</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">volatile</span> <span class="keyword">static</span> Singleton INSTANCE = <span class="keyword">null</span>;</span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">Singleton</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (INSTANCE != <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> RuntimeException(<span class="string">"Singleton that has been instantiated."</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Singleton <span class="title">getInstance</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (INSTANCE == <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">synchronized</span> (Singleton.class) &#123;</span><br><span class="line">                <span class="keyword">if</span> (INSTANCE == <span class="keyword">null</span>) &#123;</span><br><span class="line">                    INSTANCE = <span class="keyword">new</span> Singleton();</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> INSTANCE;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 单例模式</span></span><br><span class="line"><span class="comment"> * 1. 多线程访问的安全问题</span></span><br><span class="line"><span class="comment"> * 2. 加上volatile关键字保证变量的一致性</span></span><br><span class="line"><span class="comment"> * 3. 防止反射调用私有构造方法</span></span><br><span class="line"><span class="comment"> * 4. 让单例类可以被序列化</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Singleton</span> <span class="keyword">implements</span> <span class="title">Serializable</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">volatile</span> <span class="keyword">static</span> Singleton INSTANCE = <span class="keyword">null</span>;</span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">Singleton</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (INSTANCE != <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> RuntimeException(<span class="string">"Singleton that has been instantiated."</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Singleton <span class="title">getInstance</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (INSTANCE == <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">synchronized</span> (Singleton<span class="class">.<span class="keyword">class</span>) </span>&#123;</span><br><span class="line">                <span class="keyword">if</span> (INSTANCE == <span class="keyword">null</span>) &#123;</span><br><span class="line">                    INSTANCE = <span class="keyword">new</span> Singleton();</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> INSTANCE;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
     </div>
 
@@ -516,8 +517,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/01/14/LONG转JSON精度丢失/" rel="next" title="LONG转JSON精度丢失">
-                <i class="fa fa-chevron-left"></i> LONG转JSON精度丢失
+              <a href="/2018/01/02/log4j配置参数描述/" rel="next" title="log4j配置参数描述">
+                <i class="fa fa-chevron-left"></i> log4j配置参数描述
               </a>
             
           </div>
@@ -526,8 +527,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/07/10/线程池/" rel="prev" title="线程池">
-                线程池 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/07/17/SQL_NOTIN与IN中NULL值问题/" rel="prev" title="SQL_NOTIN与IN中NULL值问题">
+                SQL_NOTIN与IN中NULL值问题 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -585,7 +586,7 @@
 
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
-          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
               <p class="site-author-name" itemprop="name">Shepherd Xie</p>
               <p class="site-description motion-element" itemprop="description">苦逼程序员的无聊日常</p>
@@ -598,7 +599,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">31</span>
+                    <span class="site-state-item-count">21</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -621,9 +622,7 @@
                     
                       
                     
-                      
-                    
-                    <span class="site-state-item-count">6</span>
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -668,7 +667,18 @@
                   
                     
                   
-                  <a href="https://github.com/humshieh" title="GitHub &rarr; https://github.com/humshieh" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                  <a href="https://github.com/shepherd-xie" title="GitHub &rarr; https://github.com/shepherd-xie" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://blog.orkva.com/blog-book" title="GitBook &rarr; https://blog.orkva.com/blog-book" rel="noopener" target="_blank"><i class="fa fa-fw fa-book"></i>GitBook</a>
                 </span>
               
             </div>
@@ -718,7 +728,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; 2018 – <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">&copy; 2018 – <span itemprop="copyrightYear">2020</span>
   <span class="with-love" id="animate">
     <i class="fa fa-heart"></i>
   </span>

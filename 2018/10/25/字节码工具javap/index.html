@@ -15,7 +15,7 @@
 
 
 <html class="theme-next gemini use-motion" lang="zh-CN">
-<head><meta name="generator" content="Hexo 3.8.0">
+<head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
@@ -124,17 +124,17 @@
 
 
 
-  <meta name="description" content="javap命令详解javap是JDK自带的反汇编器，可以查看java编译器为我们生成的字节码。通过它，可以对照源代码和字节码，从而了解很多编译器内部的工作。可以在命令行窗口先用javap -help看下javap工具支持的选项：C:&amp;gt;javap -help  12345678910111213141516171819202122232425262728293031C:\&amp;gt;javap -hel">
+  <meta name="description" content="javap命令详解">
 <meta property="og:type" content="article">
 <meta property="og:title" content="字节码工具javap">
-<meta property="og:url" content="https://humshieh.github.io/2018/10/25/字节码工具javap/index.html">
+<meta property="og:url" content="https://shepherd-xie.github.io/2018/10/25/字节码工具javap/index.html">
 <meta property="og:site_name" content="Shepherd&#39;s Blog">
-<meta property="og:description" content="javap命令详解javap是JDK自带的反汇编器，可以查看java编译器为我们生成的字节码。通过它，可以对照源代码和字节码，从而了解很多编译器内部的工作。可以在命令行窗口先用javap -help看下javap工具支持的选项：C:&amp;gt;javap -help  12345678910111213141516171819202122232425262728293031C:\&amp;gt;javap -hel">
+<meta property="og:description" content="javap命令详解">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-09-02T10:40:40.806Z">
+<meta property="og:updated_time" content="2020-02-25T09:13:10.395Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="字节码工具javap">
-<meta name="twitter:description" content="javap命令详解javap是JDK自带的反汇编器，可以查看java编译器为我们生成的字节码。通过它，可以对照源代码和字节码，从而了解很多编译器内部的工作。可以在命令行窗口先用javap -help看下javap工具支持的选项：C:&amp;gt;javap -help  12345678910111213141516171819202122232425262728293031C:\&amp;gt;javap -hel">
+<meta name="twitter:description" content="javap命令详解">
 
 
 
@@ -143,7 +143,7 @@
 
 
 
-  <link rel="canonical" href="https://humshieh.github.io/2018/10/25/字节码工具javap/">
+  <link rel="canonical" href="https://shepherd-xie.github.io/2018/10/25/字节码工具javap/">
 
 
 
@@ -194,7 +194,7 @@
 
 </head>
 
-<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-CN">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
 
   
   
@@ -204,7 +204,7 @@
   <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
-    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
   <div class="site-meta">
     
@@ -393,20 +393,20 @@
 
   
 
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://humshieh.github.io/2018/10/25/字节码工具javap/">
+    <link itemprop="mainEntityOfPage" href="https://shepherd-xie.github.io/2018/10/25/字节码工具javap/">
 
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Shepherd Xie">
       <meta itemprop="description" content="苦逼程序员的无聊日常">
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="Shepherd's Blog">
     </span>
 
@@ -476,7 +476,8 @@
       
 
       
-        <h1 id="javap命令详解"><a href="#javap命令详解" class="headerlink" title="javap命令详解"></a><a href="https://blog.csdn.net/zhaozheng7758/article/details/8623526" target="_blank" rel="noopener">javap命令详解</a></h1><p>javap是JDK自带的反汇编器，可以查看java编译器为我们生成的字节码。通过它，可以对照源代码和字节码，从而了解很多编译器内部的工作。可以在命令行窗口先用javap -help看下javap工具支持的选项：C:>javap -help </p>
+        <h1 id="javap命令详解"><a href="#javap命令详解" class="headerlink" title="javap命令详解"></a><a href="https://blog.csdn.net/zhaozheng7758/article/details/8623526" target="_blank" rel="noopener">javap命令详解</a></h1><a id="more"></a>
+<p>javap是JDK自带的反汇编器，可以查看java编译器为我们生成的字节码。通过它，可以对照源代码和字节码，从而了解很多编译器内部的工作。可以在命令行窗口先用javap -help看下javap工具支持的选项：C:>javap -help </p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">C:\&gt;javap -help</span><br><span class="line"></span><br><span class="line">Usage: javap &lt;options&gt; &lt;classes&gt;...</span><br><span class="line"></span><br><span class="line">where options include:</span><br><span class="line"></span><br><span class="line">   -c                      输出类中各方法的未解析的代码，即构成java字节码的指令</span><br><span class="line"></span><br><span class="line">   -classpath &lt;pathlist&gt;       指定javap用来查找类的路径。目录用：分隔</span><br><span class="line"></span><br><span class="line">   -extdirs &lt;dirs&gt;             覆盖搜索安装方式扩展的位置，扩展的缺省位置为jre/lib/ext</span><br><span class="line"></span><br><span class="line">   -help                    输出帮助信息</span><br><span class="line"></span><br><span class="line">   -J&lt;flag&gt;                  直接将flag传给运行时系统</span><br><span class="line"></span><br><span class="line">   -l                       输出行及局部变量表</span><br><span class="line"></span><br><span class="line">   -public                   只显示public类及成员</span><br><span class="line"></span><br><span class="line">   -protected                只显示protected和public类及成员。</span><br><span class="line"></span><br><span class="line">   -package                 只显示包、protected和public类及成员，，这是缺省设置</span><br><span class="line"></span><br><span class="line">   -private                  显示所有的类和成员</span><br><span class="line"></span><br><span class="line">   -s                        输出内部类型签名</span><br><span class="line"></span><br><span class="line">   -bootclasspath &lt;pathlist&gt;    指定加载自举类所用的路径，如jre/lib/rt.jar或i18n.jar</span><br><span class="line"></span><br><span class="line">   -verbose                 打印堆栈大小、各方法的locals及args参数，以及class文件的编译版本</span><br></pre></td></tr></table></figure>
 <p>平时一般用-c选项用得比较多，该命令用于列出每个方法所执行的JVM指令，并显示每个方法的字节码的实际作用。可以写个HelloWorld的程序来测试一下该命令。 </p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HelloWorld</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">         <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">    </span><br><span class="line">           System.out.println(<span class="string">"Hello World!"</span>);</span><br><span class="line">    </span><br><span class="line">         &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -705,7 +706,7 @@
 
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
-          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
               <p class="site-author-name" itemprop="name">Shepherd Xie</p>
               <p class="site-description motion-element" itemprop="description">苦逼程序员的无聊日常</p>
@@ -718,7 +719,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">31</span>
+                    <span class="site-state-item-count">21</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -741,9 +742,7 @@
                     
                       
                     
-                      
-                    
-                    <span class="site-state-item-count">6</span>
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -788,7 +787,18 @@
                   
                     
                   
-                  <a href="https://github.com/humshieh" title="GitHub &rarr; https://github.com/humshieh" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                  <a href="https://github.com/shepherd-xie" title="GitHub &rarr; https://github.com/shepherd-xie" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://blog.orkva.com/blog-book" title="GitBook &rarr; https://blog.orkva.com/blog-book" rel="noopener" target="_blank"><i class="fa fa-fw fa-book"></i>GitBook</a>
                 </span>
               
             </div>
@@ -838,7 +848,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; 2018 – <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">&copy; 2018 – <span itemprop="copyrightYear">2020</span>
   <span class="with-love" id="animate">
     <i class="fa fa-heart"></i>
   </span>

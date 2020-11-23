@@ -15,7 +15,7 @@
 
 
 <html class="theme-next gemini use-motion" lang="zh-CN">
-<head><meta name="generator" content="Hexo 3.8.0">
+<head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
@@ -124,17 +124,17 @@
 
 
 
-  <meta name="description" content="JNI简单示例原贴地址JNI简单示例,包括C语言实现及调用 JNI（Java Native Interface）是Java本地方法调用接口，从Java1.1开始，Java Native Interface(JNI)标准就成为java平台的一部分，它允许Java代码和其他语言写的代码进行交互。JNI一开始是为了本地已编译语言，尤其是C和C++而设计的，但是它并不妨碍你使用其他语言，只要调用约定受支持">
+  <meta name="description" content="JNI简单示例">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JNI简单示例">
-<meta property="og:url" content="https://humshieh.github.io/2018/09/04/JNI/index.html">
+<meta property="og:url" content="https://shepherd-xie.github.io/2018/09/04/JNI/index.html">
 <meta property="og:site_name" content="Shepherd&#39;s Blog">
-<meta property="og:description" content="JNI简单示例原贴地址JNI简单示例,包括C语言实现及调用 JNI（Java Native Interface）是Java本地方法调用接口，从Java1.1开始，Java Native Interface(JNI)标准就成为java平台的一部分，它允许Java代码和其他语言写的代码进行交互。JNI一开始是为了本地已编译语言，尤其是C和C++而设计的，但是它并不妨碍你使用其他语言，只要调用约定受支持">
+<meta property="og:description" content="JNI简单示例">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-09-02T10:40:40.806Z">
+<meta property="og:updated_time" content="2020-02-25T09:12:09.075Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JNI简单示例">
-<meta name="twitter:description" content="JNI简单示例原贴地址JNI简单示例,包括C语言实现及调用 JNI（Java Native Interface）是Java本地方法调用接口，从Java1.1开始，Java Native Interface(JNI)标准就成为java平台的一部分，它允许Java代码和其他语言写的代码进行交互。JNI一开始是为了本地已编译语言，尤其是C和C++而设计的，但是它并不妨碍你使用其他语言，只要调用约定受支持">
+<meta name="twitter:description" content="JNI简单示例">
 
 
 
@@ -143,7 +143,7 @@
 
 
 
-  <link rel="canonical" href="https://humshieh.github.io/2018/09/04/JNI/">
+  <link rel="canonical" href="https://shepherd-xie.github.io/2018/09/04/JNI/">
 
 
 
@@ -194,7 +194,7 @@
 
 </head>
 
-<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-CN">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
 
   
   
@@ -204,7 +204,7 @@
   <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
-    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
   <div class="site-meta">
     
@@ -393,20 +393,20 @@
 
   
 
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://humshieh.github.io/2018/09/04/JNI/">
+    <link itemprop="mainEntityOfPage" href="https://shepherd-xie.github.io/2018/09/04/JNI/">
 
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Shepherd Xie">
       <meta itemprop="description" content="苦逼程序员的无聊日常">
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="Shepherd's Blog">
     </span>
 
@@ -476,7 +476,8 @@
       
 
       
-        <h2 id="JNI简单示例"><a href="#JNI简单示例" class="headerlink" title="JNI简单示例"></a>JNI简单示例</h2><p><strong>原贴地址<a href="https://blog.csdn.net/fenglibing/article/details/4300381" target="_blank" rel="noopener">JNI简单示例,包括C语言实现及调用</a></strong></p>
+        <h2 id="JNI简单示例"><a href="#JNI简单示例" class="headerlink" title="JNI简单示例"></a>JNI简单示例</h2><a id="more"></a>
+<p><strong>原贴地址<a href="https://blog.csdn.net/fenglibing/article/details/4300381" target="_blank" rel="noopener">JNI简单示例,包括C语言实现及调用</a></strong></p>
 <p><em>JNI（Java Native Interface）</em>是Java本地方法调用接口，从Java1.1开始，Java Native Interface(JNI)标准就成为java平台的一部分，它允许Java代码和其他语言写的代码进行交互。JNI一开始是为了本地已编译语言，尤其是C和C++而设计的，但是它并不妨碍你使用其他语言，只要调用约定受支持就可以了。</p>
 <p>Java中很多地方都使用到了JNI，如System.arrayCopy方法：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">native</span> <span class="keyword">void</span> <span class="title">arraycopy</span><span class="params">(Object array1, <span class="keyword">int</span> start1, Object array2, <span class="keyword">int</span> start2, <span class="keyword">int</span> length)</span></span>;</span><br></pre></td></tr></table></figure>
@@ -618,7 +619,7 @@
 
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
-          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
               <p class="site-author-name" itemprop="name">Shepherd Xie</p>
               <p class="site-description motion-element" itemprop="description">苦逼程序员的无聊日常</p>
@@ -631,7 +632,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">31</span>
+                    <span class="site-state-item-count">21</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -654,9 +655,7 @@
                     
                       
                     
-                      
-                    
-                    <span class="site-state-item-count">6</span>
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -701,7 +700,18 @@
                   
                     
                   
-                  <a href="https://github.com/humshieh" title="GitHub &rarr; https://github.com/humshieh" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                  <a href="https://github.com/shepherd-xie" title="GitHub &rarr; https://github.com/shepherd-xie" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://blog.orkva.com/blog-book" title="GitBook &rarr; https://blog.orkva.com/blog-book" rel="noopener" target="_blank"><i class="fa fa-fw fa-book"></i>GitBook</a>
                 </span>
               
             </div>
@@ -751,7 +761,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; 2018 – <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">&copy; 2018 – <span itemprop="copyrightYear">2020</span>
   <span class="with-love" id="animate">
     <i class="fa fa-heart"></i>
   </span>

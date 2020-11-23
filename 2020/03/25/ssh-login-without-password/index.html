@@ -15,7 +15,7 @@
 
 
 <html class="theme-next gemini use-motion" lang="zh-CN">
-<head><meta name="generator" content="Hexo 3.8.0">
+<head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
@@ -124,17 +124,17 @@
 
 
 
-  <meta name="description" content="OwnCloud123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172version: &apos;2.1&apos;volumes:  files:    driver: local  mysql:">
+  <meta name="description" content="使用 ssh-keygen 生成密钥对 ssh-keygen -o -t rsa -b 4096 -C &amp;quot;email@example.com&amp;quot;  使用 ssh-copy-id 将公钥发送至目标主机 ssh-copy-id -i ~/.ssh/id_rsa.pub user@host  使用 ssh 免密登录 ssh user@host">
 <meta property="og:type" content="article">
-<meta property="og:title" content="OwnCloud">
-<meta property="og:url" content="https://humshieh.github.io/2019/04/25/owncloud/index.html">
+<meta property="og:title" content="ssh免密登录">
+<meta property="og:url" content="https://shepherd-xie.github.io/2020/03/25/ssh-login-without-password/index.html">
 <meta property="og:site_name" content="Shepherd&#39;s Blog">
-<meta property="og:description" content="OwnCloud123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172version: &apos;2.1&apos;volumes:  files:    driver: local  mysql:">
+<meta property="og:description" content="使用 ssh-keygen 生成密钥对 ssh-keygen -o -t rsa -b 4096 -C &amp;quot;email@example.com&amp;quot;  使用 ssh-copy-id 将公钥发送至目标主机 ssh-copy-id -i ~/.ssh/id_rsa.pub user@host  使用 ssh 免密登录 ssh user@host">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-09-02T10:40:40.806Z">
+<meta property="og:updated_time" content="2020-03-25T07:55:00.363Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="OwnCloud">
-<meta name="twitter:description" content="OwnCloud123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172version: &apos;2.1&apos;volumes:  files:    driver: local  mysql:">
+<meta name="twitter:title" content="ssh免密登录">
+<meta name="twitter:description" content="使用 ssh-keygen 生成密钥对 ssh-keygen -o -t rsa -b 4096 -C &amp;quot;email@example.com&amp;quot;  使用 ssh-copy-id 将公钥发送至目标主机 ssh-copy-id -i ~/.ssh/id_rsa.pub user@host  使用 ssh 免密登录 ssh user@host">
 
 
 
@@ -143,7 +143,7 @@
 
 
 
-  <link rel="canonical" href="https://humshieh.github.io/2019/04/25/owncloud/">
+  <link rel="canonical" href="https://shepherd-xie.github.io/2020/03/25/ssh-login-without-password/">
 
 
 
@@ -153,7 +153,7 @@
   };
 </script>
 
-  <title>OwnCloud | Shepherd's Blog</title>
+  <title>ssh免密登录 | Shepherd's Blog</title>
   
 
 
@@ -194,7 +194,7 @@
 
 </head>
 
-<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-CN">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
 
   
   
@@ -204,7 +204,7 @@
   <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
-    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
   <div class="site-meta">
     
@@ -393,20 +393,20 @@
 
   
 
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://humshieh.github.io/2019/04/25/owncloud/">
+    <link itemprop="mainEntityOfPage" href="https://shepherd-xie.github.io/2020/03/25/ssh-login-without-password/">
 
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Shepherd Xie">
       <meta itemprop="description" content="苦逼程序员的无聊日常">
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="Shepherd's Blog">
     </span>
 
@@ -415,7 +415,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">OwnCloud
+          <h1 class="post-title" itemprop="name headline">ssh免密登录
 
               
             
@@ -441,7 +441,7 @@
                 
               
 
-              <time title="创建时间：2019-04-25 22:17:00" itemprop="dateCreated datePublished" datetime="2019-04-25T22:17:00+08:00">2019-04-25</time>
+              <time title="创建时间：2020-03-25 15:47:12" itemprop="dateCreated datePublished" datetime="2020-03-25T15:47:12+08:00">2020-03-25</time>
             
 
             
@@ -476,7 +476,18 @@
       
 
       
-        <h1 id="OwnCloud"><a href="#OwnCloud" class="headerlink" title="OwnCloud"></a>OwnCloud</h1><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">version:</span> <span class="string">'2.1'</span></span><br><span class="line"></span><br><span class="line"><span class="attr">volumes:</span></span><br><span class="line"><span class="attr">  files:</span></span><br><span class="line"><span class="attr">    driver:</span> <span class="string">local</span></span><br><span class="line"><span class="attr">  mysql:</span></span><br><span class="line"><span class="attr">    driver:</span> <span class="string">local</span></span><br><span class="line"><span class="attr">  backup:</span></span><br><span class="line"><span class="attr">    driver:</span> <span class="string">local</span></span><br><span class="line"><span class="attr">  redis:</span></span><br><span class="line"><span class="attr">    driver:</span> <span class="string">local</span></span><br><span class="line"></span><br><span class="line"><span class="attr">services:</span></span><br><span class="line"><span class="attr">  owncloud:</span></span><br><span class="line"><span class="attr">    image:</span> <span class="string">owncloud/server:latest</span></span><br><span class="line"><span class="attr">    restart:</span> <span class="string">always</span></span><br><span class="line"><span class="attr">    ports:</span></span><br><span class="line"><span class="bullet">      -</span> <span class="number">8080</span><span class="string">:8080</span></span><br><span class="line"><span class="attr">    depends_on:</span></span><br><span class="line"><span class="bullet">      -</span> <span class="string">db</span></span><br><span class="line"><span class="bullet">      -</span> <span class="string">redis</span></span><br><span class="line"><span class="attr">    environment:</span></span><br><span class="line"><span class="bullet">      -</span> <span class="string">OWNCLOUD_DOMAIN=www.orkva.com</span></span><br><span class="line"><span class="bullet">      -</span> <span class="string">OWNCLOUD_DB_TYPE=mysql</span></span><br><span class="line"><span class="bullet">      -</span> <span class="string">OWNCLOUD_DB_NAME=owncloud</span></span><br><span class="line"><span class="bullet">      -</span> <span class="string">OWNCLOUD_DB_USERNAME=owncloud</span></span><br><span class="line"><span class="bullet">      -</span> <span class="string">OWNCLOUD_DB_PASSWORD=owncloud</span></span><br><span class="line"><span class="bullet">      -</span> <span class="string">OWNCLOUD_DB_HOST=db</span></span><br><span class="line"><span class="bullet">      -</span> <span class="string">OWNCLOUD_ADMIN_USERNAME=admin</span></span><br><span class="line"><span class="bullet">      -</span> <span class="string">OWNCLOUD_ADMIN_PASSWORD=admin</span></span><br><span class="line"><span class="bullet">      -</span> <span class="string">OWNCLOUD_MYSQL_UTF8MB4=true</span></span><br><span class="line"><span class="bullet">      -</span> <span class="string">OWNCLOUD_REDIS_ENABLED=true</span></span><br><span class="line"><span class="bullet">      -</span> <span class="string">OWNCLOUD_REDIS_HOST=redis</span></span><br><span class="line"><span class="attr">    healthcheck:</span></span><br><span class="line"><span class="attr">      test:</span> <span class="string">["CMD",</span> <span class="string">"/usr/bin/healthcheck"</span><span class="string">]</span></span><br><span class="line"><span class="attr">      interval:</span> <span class="number">30</span><span class="string">s</span></span><br><span class="line"><span class="attr">      timeout:</span> <span class="number">10</span><span class="string">s</span></span><br><span class="line"><span class="attr">      retries:</span> <span class="number">5</span></span><br><span class="line"><span class="attr">    volumes:</span></span><br><span class="line"><span class="attr">      - files:</span><span class="string">/mnt/data</span></span><br><span class="line"></span><br><span class="line"><span class="attr">  db:</span></span><br><span class="line"><span class="attr">    image:</span> <span class="string">webhippie/mariadb:latest</span></span><br><span class="line"><span class="attr">    restart:</span> <span class="string">always</span></span><br><span class="line"><span class="attr">    environment:</span></span><br><span class="line"><span class="bullet">      -</span> <span class="string">MARIADB_ROOT_PASSWORD=owncloud</span></span><br><span class="line"><span class="bullet">      -</span> <span class="string">MARIADB_USERNAME=owncloud</span></span><br><span class="line"><span class="bullet">      -</span> <span class="string">MARIADB_PASSWORD=owncloud</span></span><br><span class="line"><span class="bullet">      -</span> <span class="string">MARIADB_DATABASE=owncloud</span></span><br><span class="line"><span class="bullet">      -</span> <span class="string">MARIADB_MAX_ALLOWED_PACKET=128M</span></span><br><span class="line"><span class="bullet">      -</span> <span class="string">MARIADB_INNODB_LOG_FILE_SIZE=64M</span></span><br><span class="line"><span class="attr">    healthcheck:</span></span><br><span class="line"><span class="attr">      test:</span> <span class="string">["CMD",</span> <span class="string">"/usr/bin/healthcheck"</span><span class="string">]</span></span><br><span class="line"><span class="attr">      interval:</span> <span class="number">30</span><span class="string">s</span></span><br><span class="line"><span class="attr">      timeout:</span> <span class="number">10</span><span class="string">s</span></span><br><span class="line"><span class="attr">      retries:</span> <span class="number">5</span></span><br><span class="line"><span class="attr">    volumes:</span></span><br><span class="line"><span class="attr">      - mysql:</span><span class="string">/var/lib/mysql</span></span><br><span class="line"><span class="attr">      - backup:</span><span class="string">/var/lib/backup</span></span><br><span class="line"></span><br><span class="line"><span class="attr">  redis:</span></span><br><span class="line"><span class="attr">    image:</span> <span class="string">webhippie/redis:latest</span></span><br><span class="line"><span class="attr">    restart:</span> <span class="string">always</span></span><br><span class="line"><span class="attr">    environment:</span></span><br><span class="line"><span class="bullet">      -</span> <span class="string">REDIS_DATABASES=1</span></span><br><span class="line"><span class="attr">    healthcheck:</span></span><br><span class="line"><span class="attr">      test:</span> <span class="string">["CMD",</span> <span class="string">"/usr/bin/healthcheck"</span><span class="string">]</span></span><br><span class="line"><span class="attr">      interval:</span> <span class="number">30</span><span class="string">s</span></span><br><span class="line"><span class="attr">      timeout:</span> <span class="number">10</span><span class="string">s</span></span><br><span class="line"><span class="attr">      retries:</span> <span class="number">5</span></span><br><span class="line"><span class="attr">    volumes:</span></span><br><span class="line"><span class="attr">      - redis:</span><span class="string">/var/lib/redis</span></span><br></pre></td></tr></table></figure>
+        <ul>
+<li><p>使用 <code>ssh-keygen</code> 生成密钥对</p>
+<p><code>ssh-keygen -o -t rsa -b 4096 -C &quot;email@example.com&quot;</code></p>
+</li>
+<li><p>使用 <code>ssh-copy-id</code> 将公钥发送至目标主机</p>
+<p><code>ssh-copy-id -i ~/.ssh/id_rsa.pub user@host</code></p>
+</li>
+<li><p>使用 <code>ssh</code> 免密登录</p>
+<p><code>ssh user@host</code></p>
+</li>
+</ul>
+
       
     </div>
 
@@ -506,8 +517,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/04/20/空客/" rel="next" title="空客">
-                <i class="fa fa-chevron-left"></i> 空客
+              <a href="/2020/02/27/oh-my-zsh/" rel="next" title="oh-my-zsh">
+                <i class="fa fa-chevron-left"></i> oh-my-zsh
               </a>
             
           </div>
@@ -515,10 +526,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/04/25/nginx/" rel="prev" title="Nginx">
-                Nginx <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -563,19 +570,10 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <div class="site-overview-wrap sidebar-panel">
+      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
-          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
               <p class="site-author-name" itemprop="name">Shepherd Xie</p>
               <p class="site-description motion-element" itemprop="description">苦逼程序员的无聊日常</p>
@@ -588,7 +586,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">31</span>
+                    <span class="site-state-item-count">21</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -611,9 +609,7 @@
                     
                       
                     
-                      
-                    
-                    <span class="site-state-item-count">6</span>
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -658,7 +654,18 @@
                   
                     
                   
-                  <a href="https://github.com/humshieh" title="GitHub &rarr; https://github.com/humshieh" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                  <a href="https://github.com/shepherd-xie" title="GitHub &rarr; https://github.com/shepherd-xie" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://blog.orkva.com/blog-book" title="GitBook &rarr; https://blog.orkva.com/blog-book" rel="noopener" target="_blank"><i class="fa fa-fw fa-book"></i>GitBook</a>
                 </span>
               
             </div>
@@ -678,23 +685,6 @@
       </div>
 
       
-      <!--noindex-->
-        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-            
-            
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#OwnCloud"><span class="nav-number">1.</span> <span class="nav-text">OwnCloud</span></a></li></ol></div>
-            
-
-          </div>
-        </div>
-      <!--/noindex-->
-      
 
       
 
@@ -708,7 +698,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; 2018 – <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">&copy; 2018 – <span itemprop="copyrightYear">2020</span>
   <span class="with-love" id="animate">
     <i class="fa fa-heart"></i>
   </span>
