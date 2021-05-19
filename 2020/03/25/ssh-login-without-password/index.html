@@ -124,17 +124,17 @@
 
 
 
-  <meta name="description" content="使用 ssh-keygen 生成密钥对 ssh-keygen -o -t rsa -b 4096 -C &amp;quot;email@example.com&amp;quot;  使用 ssh-copy-id 将公钥发送至目标主机 ssh-copy-id -i ~/.ssh/id_rsa.pub user@host  使用 ssh 免密登录 ssh user@host">
+  <meta name="description" content="使用 ssh-keygen 生成密钥对 ssh-keygen -o -t rsa -b 4096 -C &amp;quot;email@example.com&amp;quot;  使用 ssh-copy-id 将公钥发送至目标主机     ssh-copy-id -i ~/.ssh/id_rsa.pub user@host    ssh-keygen -t ed25519 -C &amp;quot;your_emai">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ssh免密登录">
 <meta property="og:url" content="https://shepherd-xie.github.io/2020/03/25/ssh-login-without-password/index.html">
 <meta property="og:site_name" content="Shepherd&#39;s Blog">
-<meta property="og:description" content="使用 ssh-keygen 生成密钥对 ssh-keygen -o -t rsa -b 4096 -C &amp;quot;email@example.com&amp;quot;  使用 ssh-copy-id 将公钥发送至目标主机 ssh-copy-id -i ~/.ssh/id_rsa.pub user@host  使用 ssh 免密登录 ssh user@host">
+<meta property="og:description" content="使用 ssh-keygen 生成密钥对 ssh-keygen -o -t rsa -b 4096 -C &amp;quot;email@example.com&amp;quot;  使用 ssh-copy-id 将公钥发送至目标主机     ssh-copy-id -i ~/.ssh/id_rsa.pub user@host    ssh-keygen -t ed25519 -C &amp;quot;your_emai">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2021-02-09T03:02:13.817Z">
+<meta property="og:updated_time" content="2021-05-19T03:36:20.699Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ssh免密登录">
-<meta name="twitter:description" content="使用 ssh-keygen 生成密钥对 ssh-keygen -o -t rsa -b 4096 -C &amp;quot;email@example.com&amp;quot;  使用 ssh-copy-id 将公钥发送至目标主机 ssh-copy-id -i ~/.ssh/id_rsa.pub user@host  使用 ssh 免密登录 ssh user@host">
+<meta name="twitter:description" content="使用 ssh-keygen 生成密钥对 ssh-keygen -o -t rsa -b 4096 -C &amp;quot;email@example.com&amp;quot;  使用 ssh-copy-id 将公钥发送至目标主机     ssh-copy-id -i ~/.ssh/id_rsa.pub user@host    ssh-keygen -t ed25519 -C &amp;quot;your_emai">
 
 
 
@@ -481,8 +481,13 @@
 <p><code>ssh-keygen -o -t rsa -b 4096 -C &quot;email@example.com&quot;</code></p>
 </li>
 <li><p>使用 <code>ssh-copy-id</code> 将公钥发送至目标主机</p>
-<p><code>ssh-copy-id -i ~/.ssh/id_rsa.pub user@host</code></p>
 </li>
+</ul>
+<blockquote>
+<p> <code>ssh-copy-id -i ~/.ssh/id_rsa.pub user@host</code></p>
+</blockquote>
+<p>  <code>ssh-keygen -t ed25519 -C &quot;your_email@example.com&quot;</code></p>
+<ul>
 <li><p>使用 <code>ssh</code> 免密登录</p>
 <p><code>ssh user@host</code></p>
 </li>

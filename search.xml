@@ -16,7 +16,7 @@
   <entry>
     <title><![CDATA[ssh免密登录]]></title>
     <url>%2F2020%2F03%2F25%2Fssh-login-without-password%2F</url>
-    <content type="text"><![CDATA[使用 ssh-keygen 生成密钥对 ssh-keygen -o -t rsa -b 4096 -C &quot;email@example.com&quot; 使用 ssh-copy-id 将公钥发送至目标主机 ssh-copy-id -i ~/.ssh/id_rsa.pub user@host 使用 ssh 免密登录 ssh user@host]]></content>
+    <content type="text"><![CDATA[使用 ssh-keygen 生成密钥对 ssh-keygen -o -t rsa -b 4096 -C &quot;email@example.com&quot; 使用 ssh-copy-id 将公钥发送至目标主机 ssh-copy-id -i ~/.ssh/id_rsa.pub user@host ssh-keygen -t ed25519 -C &quot;your_email@example.com&quot; 使用 ssh 免密登录 ssh user@host]]></content>
   </entry>
   <entry>
     <title><![CDATA[oh-my-zsh]]></title>
